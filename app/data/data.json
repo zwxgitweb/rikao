@@ -1,0 +1,38 @@
+[
+    {
+        "src": "img/1.png",
+        "name": "百度",
+        "address": "北京市",
+        "info": "互联网",
+        "work1": "热招",
+        "workspan": "前段工程师",
+        "work2": "等2222个职位"
+    },
+    {
+        "src": "img/2.png",
+        "name": "百度",
+        "address": "北京市",
+        "info": "互联网",
+        "work1": "热招",
+        "workspan": "前段工程师",
+        "work2": "等2222个职位"
+    },
+    {
+        "src": "img/3.png",
+        "name": "百度",
+        "address": "北京市",
+        "info": "互联网",
+        "work1": "热招",
+        "workspan": "前段工程师",
+        "work2": "等2222个职位"
+    },
+    {
+        "src": "img/4.png",
+        "name": "百度",
+        "address": "北京市",
+        "info": "互联网",
+        "work1": "热招",
+        "workspan": "前段工程师",
+        "work2": "等2222个职位"
+    }
+]

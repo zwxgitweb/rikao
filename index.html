@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="app/content/css/style.css">
+    <link rel="stylesheet" href="app/fonts/iconfont.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <span></span>
+            <span>公司</span>
+            <span><i class="iconfont icon-fangdajing"></i></span>
+        </header>
+        <nav class="nav">
+            <span><em>融资</em><i class="iconfont icon-xiangxia"></i></span>
+            <span><em>融资</em><i class="iconfont icon-xiangxia"></i></span>
+            <span><em>融资</em><i class="iconfont icon-xiangxia"></i></span>
+        </nav>
+        <!--  渲染主模板 -->
+        <section class="section"></section>
+        <footer class="footer">
+            <a href="#"><i class="iconfont icon-tianmao1"></i><em>我的</em></a>
+            <a href="#"><i class="iconfont icon-xiaoxi on"></i><em>我的</em></a>
+            <a href="#"><i class="iconfont icon-gouwuche"></i><em>我的</em></a>
+            <a href="#"><i class="iconfont icon-wode"></i><em>我的</em></a>
+        </footer>
+    </div>
+    <script src='app/content/js/jquery-2.1.1.min.js'></script>
+    <script src='app/content/js/ajax.js'></script>
+    <script>
+        // ajax渲染模板
+        function renserToDom (data) {
+            var str = '';
+            $(data).each(function (i, v){
+                str += `
+                    <div class="show">
+                        <dl>
+                            <dt><img src="${v.src}"></dt>
+                            <dd>
+                                <h5>${v.name}</h5>
+                                <address>${v.address}</address>
+                                <p class="info">${v.info}</p>
+                                <p class="work"><em>${v.work1}<span>${v.workspan}</span>${v.work2}</em><i class="iconfont icon-angle-right"></i></p>
+                            </dd>
+                        </dl>
+                    </div>
+                `
+            })
+            $('.section').html(str);
+        }
+        // 点击切换样式
+        $('.footer a i').each(function (i, v) {
+            $(this).on('click', function () {
+                $('.footer a i').removeClass('on');
+                $(this).addClass('on');
+            })
+        })
+    </script>
+</body>
+</html>
